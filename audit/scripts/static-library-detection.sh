@@ -30,8 +30,9 @@ detect_static_libs() {
     fi
     # Common library detection patterns
     declare -A lib_patterns
-    lib_patterns[hdf5]="H5|HDF5|ignore_disabled_|Nflock|Pflock"
-    lib_patterns[h5tools]="calc|error|fill|find|free_|get_|h5tools|table|trav|render_bin_output|test_"
+    lib_patterns[hdf5]="H5|HDF5"
+    lib_patterns[h5tools]="h5tools"
+    lib_patterns[libaec]="aec_"
     lib_patterns[zlib]="inflate|deflate|gzip|compress"
     # Extract symbols
     symbols=$(nm "$binary" 2>/dev/null | cut -d' ' -f3- | grep -v '^$')
