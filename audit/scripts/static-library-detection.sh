@@ -30,22 +30,15 @@ detect_static_libs() {
     fi
     # Common library detection patterns
     declare -A lib_patterns
-    lib_patterns[hdf5]="H5|HDF5|h5tools"
-    lib_patterns[h5tools]="h5tools|trav|render_bin_output|test_family|test_single"
-    lib_patterns[boost]="boost::|_ZN5boost"
-    lib_patterns[openssl]="SSL_|EVP_|RSA_|BN_"
+    lib_patterns[hdf5]="H5|HDF5|ignore_disabled_|Nflock|Pflock"
+    lib_patterns[h5tools]="calc|error|fill|find|free_|get_|h5tools|table|trav|render_bin_output|test_"
     lib_patterns[zlib]="inflate|deflate|gzip|compress"
-    lib_patterns[protobuf]="google::protobuf|_ZN6google8protobuf"
-    lib_patterns[fmt]="fmt::|_ZN3fmt"
-    lib_patterns[spdlog]="spdlog::|_ZN6spdlog"
-    lib_patterns[gtest]="testing::|_ZN7testing"
-    lib_patterns[eigen]="Eigen::|_ZN5Eigen"
     # Extract symbols
     symbols=$(nm "$binary" 2>/dev/null | cut -d' ' -f3- | grep -v '^$')
     detected_libs=()
     for lib in "${!lib_patterns[@]}"; do
         pattern="${lib_patterns[$lib]}"
-        if echo "$symbols" | grep -qE "$pattern"; then
+        if grep -qE "$pattern" <<<"$symbols"; then
             detected_libs+=("$lib")
             echo "  ✓ Detected static library: $lib"
         fi
