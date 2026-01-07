@@ -5,7 +5,7 @@
 If you believe you have found a security or privacy issue affecting HDF5
 or related ecosystem components, **do not** open a public GitHub issue.
 
-Instead, please follow the main HDF5 project’s security policy (e.g.,
+Instead, please follow the specific product’s security policy (e.g.,
 email security contact or use the designated reporting channel).
 
 If you are unsure where to report:

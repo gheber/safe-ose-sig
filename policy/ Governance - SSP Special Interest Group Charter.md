@@ -44,6 +44,6 @@ HDF5 also uses public channels (forum/discussions) for community engagement, whi
 
 | Control ID | Control statement | Minimum evidence | Audit checklist (how to test) |
 | ---------- | ----------------- | ---------------- | ----------------------------- |
-| HDF5-SINS-GOV‑01 | The SSP SIG SHALL review SSP policies at least annually and record approvals and changes. | Annual review minutes + version history. | Verify last annual review date and outcomes. |
-| HDF5-SINS-GOV‑02 | The SIG SHALL maintain a security backlog and publish a high-level roadmap (redacted as needed). | Roadmap doc; backlog labels. | Confirm roadmap exists; confirm backlog is active. |
-| HDF5-SINS-GOV‑03 | The SIG SHALL maintain an audit archive of evidence artifacts and prior audit results (as permitted). | Archive index + retention policy. | Confirm archive exists and is access controlled. |
+| HDF5-SHINES-GOV‑01 | The SSP SIG SHALL review SSP policies at least annually and record approvals and changes. | Annual review minutes + version history. | Verify last annual review date and outcomes. |
+| HDF5-SHINES-GOV‑02 | The SIG SHALL maintain a security backlog and publish a high-level roadmap (redacted as needed). | Roadmap doc; backlog labels. | Confirm roadmap exists; confirm backlog is active. |
+| HDF5-SHINES-GOV‑03 | The SIG SHALL maintain an audit archive of evidence artifacts and prior audit results (as permitted). | Archive index + retention policy. | Confirm archive exists and is access controlled. |

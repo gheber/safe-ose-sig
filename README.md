@@ -33,7 +33,7 @@ See:
 - [GOVERNANCE.md](./GOVERNANCE.md) — roles, decision-making, and lifecycle.
 - [CONTRIBUTING.md](./CONTRIBUTING.md) — how to get involved.
 - [SECURITY.md](./SECURITY.md) — coordinated vulnerability disclosure.
-- [POLICIES](./policy/README.md) — policies governing the HDF5 library, file format, and extensions
+- [POLICIES](./policy/README.md) — policies governing HDF5 software.
 
 ## Meetings
 
