@@ -2,7 +2,7 @@
 
 | Key | Value |
 | --- | ------|
-| **Document ID:** | HDF5-SINS-PM |
+| **Document ID:** | HDF5-SHINES-PM |
 | **Version:** | 0.1 (Draft) |
 | **Effective date:** | 2025‑12‑31 |
 | **Applies to:** | HDF5 reference implementation (HDFGroup/hdf5), HDF5 file format specification, official release artifacts, and “official/registered” plugin & extension ecosystem. |
@@ -38,9 +38,9 @@
 ### Control ID scheme
 
 Controls are uniquely identified as:
-**HDF5-SINS-{DOMAIN}‑{NN}** 
+**HDF5-SHINES-{DOMAIN}‑{NN}** 
 
-Example: **HDF5-SINS-SDLC‑01**.
+Example: **HDF5-SHINES-SDLC‑01**.
 
 ## Policy catalog
 
@@ -67,75 +67,75 @@ Example: **HDF5-SINS-SDLC‑01**.
 
 | Control ID | Where to find evidence (pointers) |
 | ---------- | --------------------------------- |
-| HDF5-SINS-SDLC‑01   | GitHub branch protection settings; required status checks; merge rules; PR history      |
-| HDF5-SINS-SDLC‑02   | CODEOWNERS (if used); PR labels like `security-review`; SIG reviewer roster             |
-| HDF5-SINS-SDLC‑03   | `docs/security/secure-coding.md`; CONTRIBUTING references; static analysis configs      |
-| HDF5-SINS-SDLC‑04   | PR template (`.github/pull_request_template.md`); PR descriptions; risk label taxonomy  |
-| HDF5-SINS-SDLC‑05   | `.github/workflows/*`; CI logs/artifacts; required checks list                          |
-| HDF5-SINS-SDLC‑06   | GitHub org security settings attestation; quarterly access review minutes               |
-| HDF5-SINS-DEP‑01    | `docs/build/dependencies.md`; build option matrix; `release_docs/` build notes          |
-| HDF5-SINS-DEP‑02    | `LICENSE`; third-party notices files in source + release tarballs                       |
-| HDF5-SINS-DEP‑03    | SBOM files attached to releases; `sbom/` directory (if created)                         |
-| HDF5-SINS-DEP‑04    | Dependency scan outputs; issues labeled `dependency` + `security`; PSIRT tracker        |
-| HDF5-SINS-DEP‑05    | PR checklist; provenance notes; license review approvals                                |
-| HDF5-SINS-VULN‑01   | `SECURITY.md` and/or GitHub “Security” tab guidance                                     |
-| HDF5-SINS-VULN‑02   | PSIRT intake tracker (private); acknowledgement timestamps; email alias logs (redacted) |
-| HDF5-SINS-VULN‑03   | Advisory drafts; CVSS worksheets; affected-version matrices                             |
-| HDF5-SINS-VULN‑04   | Regression tests under `test/`; advisory-to-commit links; “CVE regression” CI jobs      |
-| HDF5-SINS-VULN‑05   | GitHub Security Advisories; release notes referencing fixed versions                    |
-| HDF5-SINS-REL‑01    | Release checklist in repo; release manager signoff record                               |
-| HDF5-SINS-REL‑02    | `release_docs/CHANGELOG.md`; GitHub release notes; issue/PR references                  |
-| HDF5-SINS-REL‑03    | Release notes; advisory links; PSIRT disclosure record                                  |
-| HDF5-SINS-REL‑04    | Compatibility test logs; signoff notes; CI job outputs                                  |
-| HDF5-SINS-REL‑05    | `docs/migration/*`; deprecation policy; announcements (forum/discussions)               |
-| HDF5-SINS-REL‑06    | Provenance attestations; reproducibility reports; checksum manifests                    |
-| HDF5-SINS-IR‑01     | `docs/security/ir-runbook.md`; tabletop exercise notes                                  |
-| HDF5-SINS-IR‑02     | CI retention settings; artifact storage bucket; release archive index                   |
-| HDF5-SINS-IR‑03     | Signed hash manifests; WORM/tamper-evident storage settings; access logs                |
-| HDF5-SINS-IR‑04     | Comms templates; past announcements (forum/newsletter); escalation roster               |
-| HDF5-SINS-IR‑05     | Post-incident review docs; action item tracker                                          |
-| HDF5-SINS-PLUG‑01   | `docs/plugins/governance.md`; registry/index repo references; plugin tier definitions   |
-| HDF5-SINS-PLUG‑02   | Plugin verification design; loader docs; enforcement level docs (Off/Warn/Strict)       |
-| HDF5-SINS-PLUG‑03   | Build options documentation (e.g., require signed plugins)                              |
-| HDF5-SINS-PLUG‑04   | YAML/JSON policy schema + examples; policy parser implementation                        |
-| HDF5-SINS-PLUG‑05   | Plugin manifests; registry PR requirements; metadata validation checks                  |
-| HDF5-SINS-PLUG‑06   | Hardening guide sections on plugin env vars (`HDF5_PLUGIN_PATH`, preload)               |
-| HDF5-SINS-BUILD‑01  | CI build workflows; pinned toolchain definitions; build scripts repository references   |
-| HDF5-SINS-BUILD‑02  | `SHA256SUMS`/hash manifests; release attachments; archive storage                       |
-| HDF5-SINS-BUILD‑03  | Signed installer notes (Windows); signature verification docs                           |
-| HDF5-SINS-BUILD‑04  | Provenance attestations; CI run IDs tied to release tags                                |
-| HDF5-SINS-BUILD‑05  | Reproducibility diff reports; independent rebuild notes                                 |
-| HDF5-SINS-BUILD‑06  | “Official channels” documentation; monitoring/incident notes for spoofed artifacts      |
-| HDF5-SINS-TEST‑01   | `tests/fuzz/` harnesses; corpus storage; documentation                                  |
-| HDF5-SINS-TEST‑02   | CI scheduled workflows; sanitizer builds; OSS-Fuzz integration references               |
-| HDF5-SINS-TEST‑03   | Plugin loader adversarial tests; fuzz targets for configuration surfaces                |
-| HDF5-SINS-TEST‑04   | Triage tracker for findings; labels; SLA doc                                            |
-| HDF5-SINS-TEST‑05   | CVE regression tests; mapping from advisory → test case                                 |
-| HDF5-SINS-TEST‑06   | Quarterly metrics reports; SIG meeting minutes where reviewed                           |
-| HDF5-SINS-COMP‑01   | `docs/compatibility.md`; references to official compatibility macros/docs               |
-| HDF5-SINS-COMP‑02   | Support/EOS matrix page; release branch list                                            |
-| HDF5-SINS-COMP‑03   | Backport decision records; advisory fixed-version lists                                 |
-| HDF5-SINS-COMP‑04   | Migration guides; announcements; deprecation notices                                    |
-| HDF5-SINS-CRYPTO‑01 | Crypto design doc; dependency list; code references                                     |
-| HDF5-SINS-CRYPTO‑02 | Key management SOP; access logs; rotation schedule                                      |
-| HDF5-SINS-CRYPTO‑03 | Plugin signature verification docs; enforcement mode behavior                           |
-| HDF5-SINS-CRYPTO‑04 | Transparency log references; attestation metadata (if Sigstore used)                    |
-| HDF5-SINS-CRYPTO‑05 | Compliance notes; hardening guide addendum                                              |
-| HDF5-SINS-HARD‑01   | `docs/security/hardening.md`; baseline/hardened profiles                                |
-| HDF5-SINS-HARD‑02   | Enumerated env vars and runtime knobs; lockdown recommendations                         |
-| HDF5-SINS-HARD‑03   | Signed-plugin enforcement examples; allowlist configs                                   |
-| HDF5-SINS-HARD‑04   | Resource limit docs; parsing limit tests; DoS mitigation guidance                       |
-| HDF5-SINS-HARD‑05   | Logging policy; redaction rules; default log samples                                    |
-| HDF5-SINS-GOV‑01    | Annual policy review minutes; version history table                                     |
-| HDF5-SINS-GOV‑02    | Security roadmap; backlog labels; SIG deliverables tracker                              |
-| HDF5-SINS-GOV‑03    | Audit archive index; retention/access controls                                          |
-| HDF5-SINS-TM‑01     | Threat model doc; DFDs; update log                                                      |
-| HDF5-SINS-TM‑02     | File-structure diagrams; plugin flow diagrams; trust boundary notes                     |
-| HDF5-SINS-TM‑03     | Links from TM findings → TEST backlog items; fuzz target list                           |
-| HDF5-SINS-TM‑04     | SIG minutes recording TM reviews for major features                                     |
-| HDF5-SINS-PRIV‑01   | Security/privacy guidance doc; explicit statements about default protections            |
-| HDF5-SINS-PRIV‑02   | Logging tests; default logging outputs; redaction verification                          |
-| HDF5-SINS-PRIV‑03   | Integrity/encryption design docs; key mgmt expectations; TM updates                     |
+| HDF5-SHINES-SDLC‑01   | GitHub branch protection settings; required status checks; merge rules; PR history      |
+| HDF5-SHINES-SDLC‑02   | CODEOWNERS (if used); PR labels like `security-review`; SIG reviewer roster             |
+| HDF5-SHINES-SDLC‑03   | `docs/security/secure-coding.md`; CONTRIBUTING references; static analysis configs      |
+| HDF5-SHINES-SDLC‑04   | PR template (`.github/pull_request_template.md`); PR descriptions; risk label taxonomy  |
+| HDF5-SHINES-SDLC‑05   | `.github/workflows/*`; CI logs/artifacts; required checks list                          |
+| HDF5-SHINES-SDLC‑06   | GitHub org security settings attestation; quarterly access review minutes               |
+| HDF5-SHINES-DEP‑01    | `docs/build/dependencies.md`; build option matrix; `release_docs/` build notes          |
+| HDF5-SHINES-DEP‑02    | `LICENSE`; third-party notices files in source + release tarballs                       |
+| HDF5-SHINES-DEP‑03    | SBOM files attached to releases; `sbom/` directory (if created)                         |
+| HDF5-SHINES-DEP‑04    | Dependency scan outputs; issues labeled `dependency` + `security`; PSIRT tracker        |
+| HDF5-SHINES-DEP‑05    | PR checklist; provenance notes; license review approvals                                |
+| HDF5-SHINES-VULN‑01   | `SECURITY.md` and/or GitHub “Security” tab guidance                                     |
+| HDF5-SHINES-VULN‑02   | PSIRT intake tracker (private); acknowledgement timestamps; email alias logs (redacted) |
+| HDF5-SHINES-VULN‑03   | Advisory drafts; CVSS worksheets; affected-version matrices                             |
+| HDF5-SHINES-VULN‑04   | Regression tests under `test/`; advisory-to-commit links; “CVE regression” CI jobs      |
+| HDF5-SHINES-VULN‑05   | GitHub Security Advisories; release notes referencing fixed versions                    |
+| HDF5-SHINES-REL‑01    | Release checklist in repo; release manager signoff record                               |
+| HDF5-SHINES-REL‑02    | `release_docs/CHANGELOG.md`; GitHub release notes; issue/PR references                  |
+| HDF5-SHINES-REL‑03    | Release notes; advisory links; PSIRT disclosure record                                  |
+| HDF5-SHINES-REL‑04    | Compatibility test logs; signoff notes; CI job outputs                                  |
+| HDF5-SHINES-REL‑05    | `docs/migration/*`; deprecation policy; announcements (forum/discussions)               |
+| HDF5-SHINES-REL‑06    | Provenance attestations; reproducibility reports; checksum manifests                    |
+| HDF5-SHINES-IR‑01     | `docs/security/ir-runbook.md`; tabletop exercise notes                                  |
+| HDF5-SHINES-IR‑02     | CI retention settings; artifact storage bucket; release archive index                   |
+| HDF5-SHINES-IR‑03     | Signed hash manifests; WORM/tamper-evident storage settings; access logs                |
+| HDF5-SHINES-IR‑04     | Comms templates; past announcements (forum/newsletter); escalation roster               |
+| HDF5-SHINES-IR‑05     | Post-incident review docs; action item tracker                                          |
+| HDF5-SHINES-PLUG‑01   | `docs/plugins/governance.md`; registry/index repo references; plugin tier definitions   |
+| HDF5-SHINES-PLUG‑02   | Plugin verification design; loader docs; enforcement level docs (Off/Warn/Strict)       |
+| HDF5-SHINES-PLUG‑03   | Build options documentation (e.g., require signed plugins)                              |
+| HDF5-SHINES-PLUG‑04   | YAML/JSON policy schema + examples; policy parser implementation                        |
+| HDF5-SHINES-PLUG‑05   | Plugin manifests; registry PR requirements; metadata validation checks                  |
+| HDF5-SHINES-PLUG‑06   | Hardening guide sections on plugin env vars (`HDF5_PLUGIN_PATH`, preload)               |
+| HDF5-SHINES-BUILD‑01  | CI build workflows; pinned toolchain definitions; build scripts repository references   |
+| HDF5-SHINES-BUILD‑02  | `SHA256SUMS`/hash manifests; release attachments; archive storage                       |
+| HDF5-SHINES-BUILD‑03  | Signed installer notes (Windows); signature verification docs                           |
+| HDF5-SHINES-BUILD‑04  | Provenance attestations; CI run IDs tied to release tags                                |
+| HDF5-SHINES-BUILD‑05  | Reproducibility diff reports; independent rebuild notes                                 |
+| HDF5-SHINES-BUILD‑06  | “Official channels” documentation; monitoring/incident notes for spoofed artifacts      |
+| HDF5-SHINES-TEST‑01   | `tests/fuzz/` harnesses; corpus storage; documentation                                  |
+| HDF5-SHINES-TEST‑02   | CI scheduled workflows; sanitizer builds; OSS-Fuzz integration references               |
+| HDF5-SHINES-TEST‑03   | Plugin loader adversarial tests; fuzz targets for configuration surfaces                |
+| HDF5-SHINES-TEST‑04   | Triage tracker for findings; labels; SLA doc                                            |
+| HDF5-SHINES-TEST‑05   | CVE regression tests; mapping from advisory → test case                                 |
+| HDF5-SHINES-TEST‑06   | Quarterly metrics reports; SIG meeting minutes where reviewed                           |
+| HDF5-SHINES-COMP‑01   | `docs/compatibility.md`; references to official compatibility macros/docs               |
+| HDF5-SHINES-COMP‑02   | Support/EOS matrix page; release branch list                                            |
+| HDF5-SHINES-COMP‑03   | Backport decision records; advisory fixed-version lists                                 |
+| HDF5-SHINES-COMP‑04   | Migration guides; announcements; deprecation notices                                    |
+| HDF5-SHINES-CRYPTO‑01 | Crypto design doc; dependency list; code references                                     |
+| HDF5-SHINES-CRYPTO‑02 | Key management SOP; access logs; rotation schedule                                      |
+| HDF5-SHINES-CRYPTO‑03 | Plugin signature verification docs; enforcement mode behavior                           |
+| HDF5-SHINES-CRYPTO‑04 | Transparency log references; attestation metadata (if Sigstore used)                    |
+| HDF5-SHINES-CRYPTO‑05 | Compliance notes; hardening guide addendum                                              |
+| HDF5-SHINES-HARD‑01   | `docs/security/hardening.md`; baseline/hardened profiles                                |
+| HDF5-SHINES-HARD‑02   | Enumerated env vars and runtime knobs; lockdown recommendations                         |
+| HDF5-SHINES-HARD‑03   | Signed-plugin enforcement examples; allowlist configs                                   |
+| HDF5-SHINES-HARD‑04   | Resource limit docs; parsing limit tests; DoS mitigation guidance                       |
+| HDF5-SHINES-HARD‑05   | Logging policy; redaction rules; default log samples                                    |
+| HDF5-SHINES-GOV‑01    | Annual policy review minutes; version history table                                     |
+| HDF5-SHINES-GOV‑02    | Security roadmap; backlog labels; SIG deliverables tracker                              |
+| HDF5-SHINES-GOV‑03    | Audit archive index; retention/access controls                                          |
+| HDF5-SHINES-TM‑01     | Threat model doc; DFDs; update log                                                      |
+| HDF5-SHINES-TM‑02     | File-structure diagrams; plugin flow diagrams; trust boundary notes                     |
+| HDF5-SHINES-TM‑03     | Links from TM findings → TEST backlog items; fuzz target list                           |
+| HDF5-SHINES-TM‑04     | SIG minutes recording TM reviews for major features                                     |
+| HDF5-SHINES-PRIV‑01   | Security/privacy guidance doc; explicit statements about default protections            |
+| HDF5-SHINES-PRIV‑02   | Logging tests; default logging outputs; redaction verification                          |
+| HDF5-SHINES-PRIV‑03   | Integrity/encryption design docs; key mgmt expectations; TM updates                     |
 
 ## One-page auditor worksheet (reusable template)
 
